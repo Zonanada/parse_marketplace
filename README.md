@@ -4,7 +4,7 @@
 На основе автоматизации браузера с помощью Selenium
 
 ### Для запуска требуется:
-Скачивание Chromedriver той же версии что и GoogleChrome
+Скачивание Chromedriver в папку src той же версии что и GoogleChrome
 https://chromedriver.storage.googleapis.com/index.html
 
 ### Запуск:
