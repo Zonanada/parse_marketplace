@@ -22,7 +22,7 @@ class GetLinksWilberries():
 
     def parse_link(self, url):
         self.browser.get(url)
-        sleep(4)
+        sleep(5)
         try:
             self.browser.find_element(By.XPATH, "//h1[@class='not-found-search__title']")
         except:

@@ -75,14 +75,19 @@ class ParsePageOzon():
             self.browser.delete_all_cookies()
             self.browser.get(product_url)
             print('parse page = ', product_url)
-            sleep(2)
+            sleep(2.5)
             self.name = self.browser.find_element(By.XPATH, "//div[@data-widget='webProductHeading']").text
             parameters = self.browser.find_element(By.XPATH, "//div[@data-widget='webCharacteristics']").text
+            price = self.browser.find_element(By.XPATH, "//div[@data-widget='webPrice']").text.split("\n")[0]
+            self.price = self.str_to_float(price)
             try:
                 self.grams = self.str_to_float(
                     re.search(r'Вес товара, г\s\d+', parameters).group(0))
             except:
-                self.grams = self.get_grams(self.name)    
+                self.grams = self.get_grams(self.name)
+
+            self.price_for_100_gramm = self.price / (self.grams / 100)
+
         except:
             print('failed to load => ', product_url)
 

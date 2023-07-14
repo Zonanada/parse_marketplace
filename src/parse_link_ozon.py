@@ -19,7 +19,7 @@ class GetLinksOzon:
 
     def parse_link(self, url):
         self.browser.get(url)
-        sleep(3)
+        sleep(5)
         self.all_product = self.browser.find_element(By.XPATH, "//div[@data-widget='megaPaginator']").find_elements(By.CLASS_NAME, 'tile-hover-target')
 
     def get_links(self, visited):
@@ -36,7 +36,4 @@ class GetLinksOzon:
     def __del__(self):
         self.browser.close()
  
-# getlinks = GetLinksOzon('элато')
-# visited = dict()
-# print(getlinks.get_links(visited))
 
