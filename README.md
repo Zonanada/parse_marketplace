@@ -5,7 +5,7 @@
 ![Screencast from 14 07 2023 13_58_34](https://github.com/Zonanada/parse_marketplace/assets/56389088/46b48f12-2172-46c2-b97e-7838b514ee01)
 
 ### Для запуска требуется:
-Скачивание Chromedriver в папку src той же версии что и GoogleChrome
+Chromedriver в папку src той же версии что и GoogleChrome
 https://chromedriver.storage.googleapis.com/index.html
 
 ### Запуск:
